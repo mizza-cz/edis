@@ -1,0 +1,29 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  &__link {
+    display: block;
+    text-decoration: none;
+    &:hover {
+      .post__img img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 280/140;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+  }
+}

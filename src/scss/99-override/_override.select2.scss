@@ -1,0 +1,154 @@
+/*! purgecss start ignore */
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: transparent;
+}
+.select2-container {
+  .select2-selection--single {
+    height: auto;
+    padding: 0.3rem 2.2rem 0.4rem 0.5rem;
+    border-color: var(--color-gray-300);
+    // outline: 2px solid var(--color-accent);
+    transition: all 0.3s;
+  }
+}
+
+.-error {
+  .select2-container {
+    .select2-selection--single {
+      border-color: var(--color-accent);
+      outline-color: var(--color-accent);
+    }
+  }
+}
+.-disabled {
+  cursor: not-allowed;
+  * {
+    cursor: not-allowed;
+  }
+
+  .select2-container {
+    .select2-selection--single {
+      background-color: var(--color-dark-purple);
+      border-color: #adadad;
+    }
+  }
+}
+
+.select2-dropdown {
+  z-index: 99999;
+  top: 2px;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.14), 0px 4px 5px rgba(0, 0, 0, 0.12),
+    0px 1px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.select2-results__options {
+  font-size: 12px;
+  text-transform: uppercase;
+
+  > li {
+    padding: 4px 12px;
+    font-weight: 500;
+    > span {
+      align-items: center;
+      display: flex;
+      width: 100%;
+      img {
+        margin-right: 16px;
+      }
+    }
+  }
+  .select2-results__option--selected {
+    background-color: var(--color-dark-purple) !important;
+    color: var(--color-light);
+  }
+  .select2-results__option--highlighted  {
+    background-color: var(--color-dark-purple) !important;
+  }
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  color: var(--color-gray-300);
+  padding: 0;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  background-image: url("../images/ico/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: block;
+  left: 0;
+  top: 2px;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.select2-container--default .select2-selection--single {
+  border-radius: 8px;
+  height: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__placeholder {
+  color: var(--color-gray-500);
+}
+
+.filterMenu--calendar {
+  .select2-container--default .select2-selection--single {
+    padding-left: 40px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      background-image: url("../images/ico/calendar.svg");
+      width: 20px;
+      left: 12px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 20px;
+    }
+  }
+}
+.select2-results__options > li {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.select2-container--default .select2-selection--single {
+  outline: 1px solid transparent;
+}
+.select2-container--default.select2-container--open.select2-container--below
+  .select2-selection--multiple,
+.select2-container--default.select2-container--open.select2-container--below
+  .select2-selection--single {
+  border: 1px solid var(--color-accent);
+  outline: 1px solid var(--color-accent);
+}
+/*! purgecss end ignore */

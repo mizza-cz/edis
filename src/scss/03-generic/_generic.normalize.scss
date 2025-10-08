@@ -38,15 +38,16 @@ html {
 }
 
 /* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
+// html:focus-within {
+//   scroll-behavior: smooth;
+// }
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  background: var(--color-dark-purple);
 }
 
 /* A elements that don't have a class get default styles */
@@ -67,4 +68,9 @@ button,
 textarea,
 select {
   font: inherit;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
 }

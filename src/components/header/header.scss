@@ -1,0 +1,216 @@
+.header-sponsors {
+  display: flex;
+  align-items: center;
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__item + &__item {
+    padding-left: 16px;
+    margin-left: 16px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 48px;
+      width: 1px;
+      background: var(--color-accent);
+    }
+  }
+  &__link {
+    display: block;
+    img {
+      height: 48px;
+      max-width: 120px;
+      object-fit: contain;
+      @include media-breakpoint-down(lg) {
+        height: 40px;
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+.header {
+  position: relative;
+  z-index: 99;
+  &__inner {
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.navbar {
+  @include media-breakpoint-down(xl) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: all 0.3s ease-out;
+    right: 0px;
+    z-index: 99999;
+    top: 100%;
+    width: calc(100% + 16px);
+    margin: 0 auto;
+    align-items: center;
+    padding: 16px 40px 16px;
+    flex-direction: column;
+    background-color: var(--color-dark-purple);
+    left: -8px;
+    border-bottom: 4px solid var(--color-light);
+    height: calc(100vh - 93px);
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  @include media-breakpoint-up(md) {
+    justify-content: flex-start;
+  }
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+      padding-left: 0;
+      width: 100%;
+      gap: 0.5rem;
+    }
+    &-list {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      transition: all 0.3s;
+
+      &:last-child .navbar__menu-item::before {
+        display: none;
+      }
+      @include media-breakpoint-down(xl) {
+        width: 100%;
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &.active {
+        .dropdown-menu {
+          @include media-breakpoint-down(xl) {
+            height: 100%;
+            display: flex;
+            position: static;
+          }
+        }
+      }
+      &.active {
+        .dropdown-menu {
+          transition: all 0.8s;
+          display: flex;
+          z-index: 28;
+        }
+      }
+    }
+    &-item.active {
+      color: var(--color-accent);
+    }
+    &-item {
+      color: var(--color-light);
+      transition: all 0.3s;
+      position: relative;
+      text-decoration: none;
+      height: 100%;
+
+      display: block;
+
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+      @include media-breakpoint-down(xl) {
+        text-align: center;
+        margin: 0 auto;
+        height: auto;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        justify-content: center;
+        font-size: 24px;
+      }
+    }
+  }
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 33;
+  width: max-content;
+  background-color: transparent;
+  top: 100%;
+  min-width: 180px;
+  padding: 0px 0px 0px;
+  box-shadow: 0px 0px 20px 0px rgba(16, 24, 40, 0.05);
+  border-radius: 10px;
+  flex-direction: column;
+  overflow: hidden;
+  @include media-breakpoint-down(xl) {
+    width: 100%;
+    padding-bottom: 0;
+    box-shadow: none;
+    background-color: var(--color-dark-purple);
+    gap: 2rem;
+  }
+  &__list {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    display: block;
+    &:first-child a {
+      padding-top: 16px;
+    }
+    &:last-child a {
+      padding-bottom: 16px;
+    }
+    a {
+      display: block;
+      width: 100%;
+      padding: 0;
+      text-decoration-color: transparent;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 27px;
+      color: var(--color-dark-purple);
+      background-color: var(--color-light);
+      padding: 4px 24px;
+      @include media-breakpoint-down(xl) {
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+        color: var(--color-light);
+        height: auto;
+        background-color: transparent;
+        font-size: 24px;
+        line-height: 100%;
+        padding: 0;
+      }
+      &:hover {
+        text-decoration-color: inherit;
+        @include media-breakpoint-down(xl) {
+          color: var(--color-light);
+        }
+      }
+    }
+  }
+}
+.is-nav-open .header .navbar {
+  visibility: visible;
+  opacity: 1;
+}

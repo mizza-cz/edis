@@ -1,9 +1,28 @@
-{% extends "@components/base/base.twig" %}
+{% extends "@components/base/base.twig" %} {% set title = "01.0_homepage" %} {%
+block main %}
 
-{% set title = "01.0_homepage" %}
-
-{% block main %}
-
-Hello, World!
+<div class="container">
+  <div class="main-content">
+    {% include "@components/sliderCategories/sliderCategories.twig" %}
+    <div class="px-sm-8 px-4">
+      <div class="row">
+        <div class="col-xl-3">
+          {% include "@components/filterMenu/filterMenu.twig" %}
+        </div>
+        <div class="col-xl-9">
+          <h1 class="h4 mb-5 fw-bold">Seznam kurzů</h1>
+          {% include "@components/menuCourses/menuCourses.twig" %}
+          <div class="row g-8">
+            {% for i in 1..11 %}
+            <div class="col-lg-4 col-md-6">
+              {% include "@components/post/post.twig" %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

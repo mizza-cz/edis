@@ -1,0 +1,70 @@
+<div class="filterMenu">
+  <h3 class="h4 fw-bold mb-6">Filtrování</h3>
+  <form class="filterMenu__form">
+    <label for="searchCourse">Vyhledávání</label>
+    <div class="filterMenu__item filterMenu--search">
+      <button class="filterMenu__btn">
+        {% include "@images/search.svg" %}
+      </button>
+
+      <input
+        id="searchCourse"
+        name="searchCourse"
+        type="text"
+        placeholder="Název kurzu"
+      />
+    </div>
+    <label for="city">Město</label>
+    <div class="filterMenu__item">
+      <input type="text" id="city" name="city" placeholder="Např. Praha" />
+    </div>
+    <label for="school">Vysoká škola</label>
+    <div class="filterMenu__item">
+      <select class="js-select" name="school" id="school">
+        <option></option>
+        {# placeholder #}
+        <option value="1">škola 1</option>
+        <option value="2">škola 1</option>
+        <option value="3">škola 1</option>
+        <option value="4">škola 1</option>
+        <option value="5">škola 1</option>
+      </select>
+    </div>
+    <label for="groupCourse">Cílová skupina</label>
+    <div class="filterMenu__item">
+      <select class="js-select" name="groupCourse" id="groupCourse">
+        <option></option>
+        {# placeholder #}
+        <option value="1">skupina 1</option>
+        <option value="2">skupina 1</option>
+
+        <option value="3">skupina 1</option>
+        <option value="4">skupina 1</option>
+        <option value="5">skupina 1</option>
+      </select>
+    </div>
+    <label for="formCourse">Forma kurzu</label>
+    <div class="filterMenu__item">
+      <select class="js-select" name="formCourse" id="formCourse">
+        <option></option>
+        {# placeholder #}
+        <option value="1">Forma 1</option>
+        <option value="2">Forma 1</option>
+
+        <option value="3">Forma 1</option>
+        <option value="4">Forma 1</option>
+        <option value="5">Forma 1</option>
+      </select>
+    </div>
+    <label for="formCalendar">Kalendářní měsíc</label>
+    <div class="filterMenu__item filterMenu--calendar">
+      <select class="js-select" name="formCalendar" id="formCalendar">
+        <option></option>
+        {# placeholder #}
+        <option value="1">Leden - prosinec</option>
+        <option value="2">Leden - prosinec</option>
+        <option value="3">Leden - prosinec</option>
+      </select>
+    </div>
+  </form>
+</div>

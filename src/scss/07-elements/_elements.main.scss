@@ -1,0 +1,14 @@
+.main-content {
+  background: var(--color-light);
+  border-radius: 4px;
+  padding-top: 32px;
+  padding-bottom: 72px;
+  @include media-breakpoint-down(lg) {
+    border-radius: 0;
+  }
+}
+.main .container {
+  @include media-breakpoint-down(lg) {
+    padding: 0 !important;
+  }
+}
