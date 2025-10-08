@@ -63,15 +63,25 @@
   font-size: 20px;
   line-height: 30px;
 }
+.text-lg-regular {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
 .text-md-semibold {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
 }
+.text-md-regular{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
 .text-sm-regular {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 14px !important;
+  line-height: 20px !important;
 }
 .text-sm-medium {
   font-weight: 500;

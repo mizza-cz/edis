@@ -1,4 +1,4 @@
-{% extends "@components/base/base.twig" %} {% set title = "03.0_static" %} {%
+{% extends "@components/base/base.twig" %} {% set title = "04.0_typo" %} {%
 block main %}
 
 <div class="container">
@@ -6,13 +6,35 @@ block main %}
     <div class="px-sm-8 px-4">
       <div class="container-medium">
         <div class="text-center mb-8">
-          <h1 class="h1 text-gray-900 mb-6">O projektu</h1>
+          <div class="mb-3 text-md-semibold text-gray-500">25.6.2025</div>
+          <h1 class="h1 text-gray-900 mb-6">
+            Porozumění duševním poruchám ve sportu: Stručný přehled projektu
+          </h1>
           <p class="mb-8 text-xl-regular text-gray-600">
             Zajímá vás sportovní kurz, který vás nadchne a posune vaše
             dovednosti na novou úroveň? Přihlaste se k našemu intenzivnímu
             tréninkovému programu, kde se naučíte techniky od profesionálních
             trenérů a získáte nové přátele se stejným zájmem!
           </p>
+          <ul
+            class="d-flex gap-1 align-items-center flex-wrap justify-content-center"
+          >
+            <li
+              class="text-sm-medium rounded-16 bg-gray-50 text-gray-700 px-2 py-1 border-gray-200"
+            >
+              Cílová skupina
+            </li>
+            <li
+              class="text-sm-medium rounded-16 bg-gray-50 text-gray-700 px-2 py-1 border-gray-200"
+            >
+              Forma kurzu
+            </li>
+            <li
+              class="text-sm-medium rounded-16 bg-gray-50 text-gray-700 px-2 py-1 border-gray-200"
+            >
+              Město
+            </li>
+          </ul>
         </div>
       </div>
       <div class="mb-8">
@@ -40,7 +62,11 @@ block main %}
             risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie
             aliquet sodales id est ac volutpat.
           </p>
-
+          <img
+            loading="lazy"
+            srcset="https://picsum.photos/720/480 320w"
+            alt="photo"
+          />
           <p>
             Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris
             id. Non pellentesque congue eget consectetur turpis. Sapien, dictum
@@ -75,6 +101,26 @@ block main %}
               Suspendisse maecenas ac donec scelerisque diam sed est duis purus.
             </li>
           </ol>
+          <p class="mb-4">
+            <img
+              loading="lazy"
+              srcset="https://picsum.photos/720/960 320w"
+              alt="photo"
+            />
+          </p>
+          <p class="d-flex align-items-center text-sm-regular gap-2">
+            <img
+              src="images/ico/link.svg"
+              width="16"
+              height="16"
+              class="object-fit-contain ico-link"
+              alt=""
+            />
+            <span>
+              Image courtesy of Michael Burrows via
+              <a target="_blank" href="#">Pexels</a>
+            </span>
+          </p>
         </div>
         <div class="conclusion">
           <h4 class="h4 text-gray-900 mb-4">Slovo závěrem</h4>
