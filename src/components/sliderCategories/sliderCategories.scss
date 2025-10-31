@@ -41,9 +41,9 @@
   display: flex;
   align-items: center;
   margin-bottom: 32px;
-  padding: 0 40px 0 48px;
+  padding: 0 48px;
   @include media-breakpoint-down(lg) {
-    padding: 0 32px 0 40px;
+    padding: 0 40px;
   }
 }
 .sliderCategories__button {
