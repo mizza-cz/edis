@@ -1,0 +1,101 @@
+{% extends "@components/base/base.twig" %} {% set title = "05.0_calendar" %} {%
+block main %}
+
+<div class="container">
+  <div class="main-content">
+    {% include "@components/sliderCategories/sliderCategories.twig" %}
+    <div class="px-sm-8 px-4">
+      <div class="row">
+        <div class="col-xl-3">
+          <div class="filterMenu">
+            <h3 class="h4 fw-bold mb-6">Filtrování</h3>
+            <form class="filterMenu__form">
+              <label for="searchCourse">Vyhledávání</label>
+              <div class="filterMenu__item filterMenu--search">
+                <button class="filterMenu__btn">
+                  {% include "@images/search.svg" %}
+                </button>
+
+                <input
+                  id="searchCourse"
+                  name="searchCourse"
+                  type="text"
+                  placeholder="Název kurzu"
+                />
+              </div>
+              <label for="city">Město</label>
+              <div class="filterMenu__item">
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Např. Praha"
+                />
+              </div>
+              <label for="school">Vysoká škola</label>
+              <div class="filterMenu__item">
+                <select class="js-select" name="school" id="school">
+                  <option></option>
+                  {# placeholder #}
+                  <option value="1">škola 1</option>
+                  <option value="2">škola 1</option>
+                  <option value="3">škola 1</option>
+                  <option value="4">škola 1</option>
+                  <option value="5">škola 1</option>
+                </select>
+              </div>
+              <label for="groupCourse">Cílová skupina</label>
+              <div class="filterMenu__item">
+                <select class="js-select" name="groupCourse" id="groupCourse">
+                  <option></option>
+                  {# placeholder #}
+                  <option value="1">skupina 1</option>
+                  <option value="2">skupina 1</option>
+
+                  <option value="3">skupina 1</option>
+                  <option value="4">skupina 1</option>
+                  <option value="5">skupina 1</option>
+                </select>
+              </div>
+              <label for="formCourse">Forma kurzu</label>
+              <div class="filterMenu__item">
+                <select class="js-select" name="formCourse" id="formCourse">
+                  <option></option>
+                  {# placeholder #}
+                  <option value="1">Forma 1</option>
+                  <option value="2">Forma 1</option>
+
+                  <option value="3">Forma 1</option>
+                  <option value="4">Forma 1</option>
+                  <option value="5">Forma 1</option>
+                </select>
+              </div>
+              <label for="formDate">Kalendář </label>
+              <div class="filterMenu__item filterMenu--calendar">
+                <input
+                  type="date"
+                  id="formDate"
+                  name="formDate"
+                  placeholder="24.4.2025"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-xl-9">
+          <h1 class="h4 mb-5 fw-bold">Kalendář</h1>
+          {% include "@components/menuCourses/menuCourses.twig" %}
+          <div class="row g-8">
+            {% for i in 1..11 %}
+            <div class="col-lg-4 col-md-6">
+              {% include "@components/post/post-2.twig" %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

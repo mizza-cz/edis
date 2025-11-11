@@ -71,4 +71,39 @@
     }
   }
 }
- 
+
+.filterMenu--calendar {
+  input[type="date"] {
+    padding-left: 40px;
+    position: relative;
+    color: var(--color-gray-900);
+    &::-webkit-datetime-edit {
+      color: var(--color-gray-500);
+    }
+    &:focus::-webkit-datetime-edit {
+      color: var(--color-gray-900);
+    }
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      width: 32px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../images/ico/calendar.svg");
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+    }
+  }
+}
