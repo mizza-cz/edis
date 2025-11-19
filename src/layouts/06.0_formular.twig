@@ -1,0 +1,20 @@
+{% extends "@components/base/base.twig" %} {% set title = "06.0_formular" %} {%
+block main %}
+
+<div class="container">
+  <div class="main-content">
+    <div class="px-sm-8 px-4">
+      <div class="container-medium">
+        <div class="text-center mb-8">
+          <h1 class="h1 text-gray-900 mb-6">
+            Zpětná vazba účastníků: Psychologické výzvy ve sportu
+          </h1>
+          <div class="mt-3 text-md-semibold text-gray-500">25.6.2025</div>
+        </div>
+        {% include "@components/formular/formular.twig" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
