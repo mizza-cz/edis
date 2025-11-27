@@ -7,9 +7,13 @@ $(".js-select").each(function () {
     placeholder: "Vyberte",
   });
 
-  if ($select.closest(".filterMenu__form").length) {
-    $select.on("change", () => {
-      $select.closest("form").submit();
-    });
-  }
+  // if ($select.closest(".filterMenu__form").length) {
+  //   $select.on("change", () => {
+  //     $select.closest("form").submit();
+  //   });
+  // }
+});
+$(".js-select-multiple").select2({
+  placeholder: "Vyberte školní ligu",
+  width: "100%",
 });

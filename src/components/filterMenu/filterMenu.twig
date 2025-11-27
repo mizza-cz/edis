@@ -20,7 +20,12 @@
     </div>
     <label for="school">Vysoká škola</label>
     <div class="filterMenu__item">
-      <select class="js-select" name="school" id="school">
+      <select
+        class="js-select js-select-multiple"
+        multiple
+        name="school[]"
+        id="school"
+      >
         <option></option>
         {# placeholder #}
         <option value="1">škola 1</option>
@@ -45,7 +50,12 @@
     </div>
     <label for="formCourse">Forma kurzu</label>
     <div class="filterMenu__item">
-      <select class="js-select" name="formCourse" id="formCourse">
+      <select
+        class="js-select js-select-multiple"
+        name="formCourse[]"
+        multiple
+        id="formCourse"
+      >
         <option></option>
         {# placeholder #}
         <option value="1">Forma 1</option>
