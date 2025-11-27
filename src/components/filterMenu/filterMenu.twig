@@ -37,7 +37,12 @@
     </div>
     <label for="groupCourse">Cílová skupina</label>
     <div class="filterMenu__item">
-      <select class="js-select" name="groupCourse" id="groupCourse">
+      <select
+        class="js-select js-select-multiple"
+        multiple
+        name="groupCourse[]"
+        id="groupCourse"
+      >
         <option></option>
         {# placeholder #}
         <option value="1">skupina 1</option>
