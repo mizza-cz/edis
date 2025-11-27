@@ -255,14 +255,29 @@
 												<option value="5">Forma 1</option>
 											</select>
 										</div>
-										<label for="formCalendar">Kalendářní měsíc</label>
-										<div class="filterMenu__item filterMenu--calendar">
-											<select class="js-select" name="formCalendar" id="formCalendar">
+
+										<label for="formCourse">Forma vzdělávání</label>
+										<div class="filterMenu__item">
+											<select class="js-select js-select-multiple" name="formEducation[]" multiple id="formEducation">
 												<option></option>
 
-												<option value="1">Leden - prosinec</option>
-												<option value="2">Leden - prosinec</option>
-												<option value="3">Leden - prosinec</option>
+												<option value="1">vzdělávání 1</option>
+												<option value="2">vzdělávání 1</option>
+
+												<option value="3">vzdělávání 1</option>
+												<option value="4">vzdělávání 1</option>
+												<option value="5">vzdělávání 1</option>
+											</select>
+										</div>
+
+										<label for="formCalendar">Kalendářní měsíc</label>
+										<div class="filterMenu__item filterMenu--calendar">
+											<select multiple class="js-select js-select-multiple" name="formCalendar[]" id="formCalendar">
+												<option></option>
+
+												<option value="3">Listopad</option>
+												<option value="2">Prosinec</option>
+												<option value="1">Leden</option>
 											</select>
 										</div>
 									</form>
