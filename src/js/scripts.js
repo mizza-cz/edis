@@ -3,7 +3,10 @@
 //=include ../../node_modules/swiper/swiper.js
 //=include ../../node_modules/swiper/swiper-bundle.min.js
 //=include ../../node_modules/select2/dist/js/select2.min.js
-document.addEventListener("DOMContentLoaded", function() {
-//=include ../components/**/*.js
-//=include custom/*.js
+//=include ../../node_modules/flatpickr/dist/flatpickr.min.js
+
+//=include ../../node_modules/flatpickr/dist/l10n/cs.js
+document.addEventListener("DOMContentLoaded", function () {
+  //=include ../components/**/*.js
+  //=include custom/*.js
 });

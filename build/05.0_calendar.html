@@ -231,7 +231,7 @@
 										</div>
 										<label for="groupCourse">Cílová skupina</label>
 										<div class="filterMenu__item">
-											<select class="js-select" name="groupCourse" id="groupCourse">
+											<select class="js-select js-select-multiple" multiple name="groupCourse[]" id="groupCourse">
 												<option></option>
 
 												<option value="1">skupina 1</option>
@@ -257,7 +257,7 @@
 										</div>
 										<label for="formDate">Kalendář </label>
 										<div class="filterMenu__item filterMenu--calendar">
-											<input type="date" id="formDate" name="formDate" placeholder="24.4.2025" />
+											<input placeholder="Vyberte" type="text" id="picker-js" name="formDate" />
 										</div>
 									</form>
 								</div>

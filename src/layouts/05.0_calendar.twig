@@ -51,7 +51,12 @@ block main %}
               </div>
               <label for="groupCourse">Cílová skupina</label>
               <div class="filterMenu__item">
-                <select class="js-select" name="groupCourse" id="groupCourse">
+                <select
+                  class="js-select js-select-multiple"
+                  multiple
+                  name="groupCourse[]"
+                  id="groupCourse"
+                >
                   <option></option>
                   {# placeholder #}
                   <option value="1">skupina 1</option>
@@ -83,10 +88,10 @@ block main %}
               <label for="formDate">Kalendář </label>
               <div class="filterMenu__item filterMenu--calendar">
                 <input
-                  type="date"
-                  id="formDate"
+                  placeholder="Vyberte"
+                  type="text"
+                  id="picker-js"
                   name="formDate"
-                  placeholder="24.4.2025"
                 />
               </div>
             </form>
