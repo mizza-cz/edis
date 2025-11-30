@@ -14,6 +14,6 @@ $(".js-select").each(function () {
   // }
 });
 $(".js-select-multiple").select2({
-  placeholder: "Vyberte školní ligu",
+  placeholder: "Vyberte",
   width: "100%",
 });
