@@ -1,4 +1,7 @@
 .filterMenu {
+  @include media-breakpoint-down(xl) {
+    margin-bottom: 28px;
+  }
   &__form {
     display: flex;
     flex-direction: column;
