@@ -1,5 +1,7 @@
 flatpickr("#picker-js", {
   mode: "range",
   locale: "cs",
-  dateFormat: "j. n. Y",
+  altInput: true,
+  altFormat: "j. n. Y",
+  dateFormat: "Y-m-d",
 });
