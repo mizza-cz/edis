@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  .page-link {
+    background-color: var(--color-gray-50);
+    border: 0.0625rem solid var(--color-gray-200);
+    border-radius: 0.25rem !important;
+    color: var(--color-dark-purple);
+    &:hover {
+      border: 1px solid var(--color-accent);
+    }
+  }
+  .page-item.active .page-link {
+    background: var(--color-accent);
+    color: var(--color-light);
+    border: 1px solid var(--color-accent);
+  }
+  .page-item.disabled .page-link {
+    opacity: 0.5;
+  }
+}
